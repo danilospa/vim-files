@@ -2,6 +2,9 @@ call pathogen#infect()
 
 set nocompatible
 
+" allow copy text from other apps and paste on vim
+set paste
+
 syntax on
 
 " Auto detect filetype
