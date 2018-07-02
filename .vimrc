@@ -17,3 +17,10 @@ let mapleader = ' '
 
 " Alternate between last opened buffer
 nnoremap <leader><leader> <c-^>
+
+" Mapping for tab manipulation
+map <leader>tt :tabnew<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tm :tabmove
