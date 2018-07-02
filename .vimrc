@@ -21,10 +21,22 @@ map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 map <leader>tm :tabmove
 
+" ########## VISUAL MODE MAPPING ##########
+
+" Copy/Cut to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+
+" Paste from system clipboard
+vmap <Leader>p "+p
+
 " ########## NORMAL MODE MAPPING ##########
 
 nnoremap <C-n> :NERDTree <cr>
 nnoremap <C-p> :FZF <cr>
+
+" Paste from system clipboard
+nmap <Leader>p "+p
 
 " Alternate between last opened buffer
 nnoremap <leader><leader> <c-^>
@@ -57,3 +69,6 @@ set shiftwidth=2
 
 " Use spaces instead of tabs
 set expandtab
+
+" Allow clipboard access when using tmux
+set clipboard=unnamed
