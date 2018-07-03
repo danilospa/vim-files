@@ -14,3 +14,7 @@ Run vim and execute the following:
 ```
 :PlugInstall
 ```
+
+## Commands to remember
+
+- fc: fix last command on $EDITOR
