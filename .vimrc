@@ -55,6 +55,11 @@ nnoremap <leader><leader> <c-^>
 nnoremap H ^
 nnoremap L $
 
+" ########## COMMAND-LINE MODE MAPPING ##########
+
+" Map %% to open files in the same directory as the current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 " ########## GENERAL CONFIGURATIONS ##########
 
 " Show line numbers
