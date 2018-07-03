@@ -21,6 +21,9 @@ map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 map <leader>tm :tabmove
 
+" Mapping to show or hide invisibles
+map <leader>l :set list!<cr>
+
 " ########## VISUAL MODE MAPPING ##########
 
 " Copy/Cut to system clipboard
@@ -72,3 +75,12 @@ set expandtab
 
 " Allow clipboard access when using tmux
 set clipboard=unnamed
+
+" Set line break
+set linebreak
+
+" Don't show invisibles
+set nolist
+
+" Invisibles for tab and end of line
+set listchars=tab:▸\ ,eol:¬,trail:·
