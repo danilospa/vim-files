@@ -33,6 +33,10 @@ vmap <Leader>d "+d
 " Paste from system clipboard
 vmap <Leader>p "+p
 
+" End of line and First non-blank chracter of the line
+vnoremap H ^
+vnoremap L $
+
 " ########## NORMAL MODE MAPPING ##########
 
 nnoremap <C-n> :NERDTree <cr>
@@ -46,6 +50,10 @@ nmap <leader>f vi{zf
 
 " Alternate between last opened buffer
 nnoremap <leader><leader> <c-^>
+
+" End of line and First non-blank chracter of the line
+nnoremap H ^
+nnoremap L $
 
 " ########## GENERAL CONFIGURATIONS ##########
 
