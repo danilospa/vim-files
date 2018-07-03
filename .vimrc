@@ -67,7 +67,9 @@ set nobackup
 set nowritebackup
 
 " Keep swap files in one location
-set directory=$HOME/.vim/tmp//,.
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
 " Default tab width
 set tabstop=2
