@@ -87,3 +87,6 @@ set nolist
 
 " Invisibles for tab and end of line
 set listchars=tab:▸\ ,eol:¬,trail:·
+
+" Handle multiple buffer better
+set hidden
