@@ -41,6 +41,9 @@ nnoremap <C-p> :FZF <cr>
 " Paste from system clipboard
 nmap <Leader>p "+p
 
+" Mapping for quick js/less/scss folding
+nmap <leader>f vi{zf
+
 " Alternate between last opened buffer
 nnoremap <leader><leader> <c-^>
 
