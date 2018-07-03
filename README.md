@@ -2,8 +2,9 @@
 
 ## Installing Pathogen dependencies
 
+First clone:
 ```bash
-git submodule update --recursive --remote
+git submodule update --init --recursive
 ```
 
 Install [Ack](https://beyondgrep.com/install/).
