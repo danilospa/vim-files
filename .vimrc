@@ -1,13 +1,25 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-runtime bundle/vim-plug/plug.vim
+runtime vim-plug/plug.vim
 
 call plug#begin('~/.vim/plugged')
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tomtom/tlib_vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'honza/vim-snippets'
+Plug 'garbas/vim-snipmate'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'grvcoelho/vim-javascript-snippets'
+Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/vimproc.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'digitaltoad/vim-pug'
 call plug#end()
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 

@@ -1,15 +1,14 @@
 # Danilo's dot files
 
-## Installing Pathogen dependencies
+## Installing Vim Plug dependency manager
 
-First clone:
 ```bash
 git submodule update --init --recursive
 ```
 
-Install [Ack](https://beyondgrep.com/install/).
+## Installing Vim-Plug dependencies
 
-## Installing Plug dependencies
+Install [Ack](https://beyondgrep.com/install/).
 
 Run vim and execute the following:
 ```

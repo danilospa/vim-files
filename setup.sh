@@ -5,7 +5,7 @@ ln -s $(pwd)/.vim ~/.vim
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.inputrc ~/.inputrc
 
-pushd .vim/bundle/vimproc.vim
+pushd .vim/plugged/vimproc.vim
 make
 popd
 
