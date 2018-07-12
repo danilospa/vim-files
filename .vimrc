@@ -73,6 +73,10 @@ nnoremap L $
 " Map %% to open files in the same directory as the current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
+" Navigate without arrows on command line
+cnoremap <C-k> <Up>
+cnoremap <C-j> <Down>
+
 " ########## GENERAL CONFIGURATIONS ##########
 
 " Show line numbers
