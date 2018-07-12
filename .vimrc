@@ -4,6 +4,7 @@ runtime bundle/vim-plug/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'digitaltoad/vim-pug'
 call plug#end()
 
 execute pathogen#infect()
