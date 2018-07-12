@@ -108,9 +108,6 @@ set shiftwidth=2
 " Use spaces instead of tabs
 set expandtab
 
-" Allow clipboard access when using tmux
-set clipboard=unnamed
-
 " Set line break
 set linebreak
 
