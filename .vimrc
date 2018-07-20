@@ -53,7 +53,9 @@ vnoremap L $
 " ########## NORMAL MODE MAPPING ##########
 
 nnoremap <C-n> :NERDTree <cr>
-nnoremap <C-p> :FZF <cr>
+
+" Execute FZF ignoring gitignore folders
+nnoremap <C-p> :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached' })) <cr>
 
 " Paste from system clipboard
 nmap <Leader>p "+p
