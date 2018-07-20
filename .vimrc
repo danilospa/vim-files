@@ -124,3 +124,9 @@ set hidden
 
 " Enable custom project configurations
 set exrc
+
+" Ignore case when search
+set ignorecase
+
+" If expression has capital letter the case is relevant
+set smartcase
