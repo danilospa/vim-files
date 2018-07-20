@@ -119,3 +119,6 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 
 " Handle multiple buffer better
 set hidden
+
+" Enable custom project configurations
+set exrc
