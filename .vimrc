@@ -72,6 +72,16 @@ nnoremap L $
 
 " ########## COMMAND-LINE MODE MAPPING ##########
 
+function! SwapBetweenSpecAndCodeFile()
+  let filename = expand('%:t')
+  if filename =~ '.spec.'
+    exec ':e ' . substitute(@%, '.spec', '', '')
+  else
+    exec ':e ' . expand('%:r') . '.spec.' . expand('%:e')
+  endif
+endfunction
+autocmd FileType typescript,javascript cmap A<cr> :call SwapBetweenSpecAndCodeFile()<cr>
+
 " Map %% to open files in the same directory as the current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
