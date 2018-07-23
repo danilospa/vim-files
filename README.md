@@ -8,7 +8,7 @@ git submodule update --init --recursive
 
 ## Installing Vim-Plug dependencies
 
-Install [Ack](https://beyondgrep.com/install/).
+Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation).
 
 Run vim and execute the following:
 ```
