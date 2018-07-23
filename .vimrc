@@ -1,6 +1,7 @@
 runtime vim-plug/plug.vim
 
 call plug#begin('~/.vim/plugged')
+Plug 'Raimondi/delimitMate'
 Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tlib_vim'
