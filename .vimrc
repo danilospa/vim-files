@@ -75,11 +75,16 @@ nnoremap L $
 
 function! SwapBetweenSpecAndCodeFile()
   let filename = expand('%:t')
+  let extension = expand('%:e')
+
   if filename =~ '.spec.'
-    exec ':e ' . substitute(@%, '.spec', '', '')
+    let filenameWithoutWithoutExtension = substitute(expand('%:t:r'), '.spec', '', '')
+    let file = system('find . -name "*' . filenameWithoutWithoutExtension . '*' . extension . '" -not -name "*spec*"')
   else
-    exec ':e ' . expand('%:r') . '.spec.' . expand('%:e')
+    let file = system('find . -name "*' . expand('%:t:r') . '*spec*' . extension . '"')
   endif
+
+  exec ':e ' . file
 endfunction
 autocmd FileType typescript,javascript cmap A<cr> :call SwapBetweenSpecAndCodeFile()<cr>
 
