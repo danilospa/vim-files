@@ -71,6 +71,9 @@ nnoremap <leader><leader> <c-^>
 nnoremap H ^
 nnoremap L $
 
+" Copy relative file path
+nnoremap cf :let @*=expand('%')<cr>
+
 " ########## COMMAND-LINE MODE MAPPING ##########
 
 function! SwapBetweenSpecAndCodeFile()
