@@ -76,27 +76,20 @@ nnoremap cf :let @*=expand('%')<cr>
 
 " ########## COMMAND-LINE MODE MAPPING ##########
 
-function! SwapBetweenSpecAndCodeFile()
-  let filename = expand('%:t')
-  let extension = expand('%:e')
-
-  if filename =~ '.spec.'
-    let filenameWithoutWithoutExtension = substitute(expand('%:t:r'), '.spec', '', '')
-    let file = system('find . -name "*' . filenameWithoutWithoutExtension . '*' . extension . '" -not -name "*spec*"')
-  else
-    let file = system('find . -name "*' . expand('%:t:r') . '*spec*' . extension . '"')
-  endif
-
-  exec ':e ' . file
-endfunction
-autocmd FileType typescript,javascript cmap A<cr> :call SwapBetweenSpecAndCodeFile()<cr>
-
 " Map %% to open files in the same directory as the current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Navigate without arrows on command line
 cnoremap <C-k> <Up>
 cnoremap <C-j> <Down>
+
+" ########## FILE SPECIFIC MAPPING ##########
+
+" Find references for TS
+autocmd FileType typescript nnoremap <leader>u :TsuReferences<cr>
+
+" Swap between code/spec
+autocmd FileType typescript,javascript,ruby cmap A<cr> :call SwapBetweenSpecAndCodeFile()<cr>
 
 " ########## GENERAL CONFIGURATIONS ##########
 
@@ -149,3 +142,18 @@ set ignorecase
 
 " If expression has capital letter the case is relevant
 set smartcase
+
+" FUNCTIONS
+function! SwapBetweenSpecAndCodeFile()
+  let filename = expand('%:t')
+  let extension = expand('%:e')
+
+  if filename =~ '.spec.'
+    let filenameWithoutWithoutExtension = substitute(expand('%:t:r'), '.spec', '', '')
+    let file = system('find . -name "*' . filenameWithoutWithoutExtension . '*' . extension . '" -not -name "*spec*"')
+  else
+    let file = system('find . -name "*' . expand('%:t:r') . '*spec*' . extension . '"')
+  endif
+
+  exec ':e ' . file
+endfunction
