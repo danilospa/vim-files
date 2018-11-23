@@ -79,6 +79,9 @@ nnoremap cf :let @*=expand('%')<cr>
 " Map %% to open files in the same directory as the current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
+" Map json to format json
+cnoremap json %!python -m json.tool<cr>
+
 " Navigate without arrows on command line
 cnoremap <C-k> <Up>
 cnoremap <C-j> <Down>
