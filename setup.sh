@@ -1,7 +1,10 @@
 #!/bin/bash
 
+[ ! -d "~/.vim" ] && mkdir ~/.vim
 ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.vim ~/.vim
+ln -s $(pwd)/.vim/backup ~/.vim/backup
+ln -s $(pwd)/.vim/swap ~/.vim/swap
+ln -s $(pwd)/.vim/undo ~/.vim/undo
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.inputrc ~/.inputrc
 
