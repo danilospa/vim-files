@@ -16,3 +16,8 @@ EXTENSION_INCLUDED=$(cat ~/.bash_profile | grep $(pwd)/.bash_profile_extension)
 if [ -z "$EXTENSION_INCLUDED" ]; then
   echo source $(pwd)/.bash_profile_extension >> ~/.bash_profile
 fi
+
+ZSH_INCLUDED=$(cat ~/.zshrc | grep $(pwd)/.zshrc_extension)
+if [ -z "$ZSH_INCLUDED" ]; then
+  echo source $(pwd)/.zshrc_extension >> ~/.zshrc
+fi
