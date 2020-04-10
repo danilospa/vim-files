@@ -8,7 +8,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tlib_vim'
-Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'honza/vim-snippets'
@@ -26,6 +25,9 @@ Plug 'morhetz/gruvbox'
 Plug 'wmvanvliet/vim-blackboard'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/denite.nvim'
 call plug#end()
 
 syntax on
@@ -96,7 +98,8 @@ cnoremap <C-j> <Down>
 " ########## FILE SPECIFIC MAPPING ##########
 
 " Find references for TS
-autocmd FileType typescript nnoremap <leader>u :TsuReferences<cr>
+autocmd FileType typescript nnoremap <leader>u :TSRefs<cr>
+autocmd FileType typescript nnoremap <leader>d :TSDef<cr>
 
 " Swap between code/spec
 autocmd FileType typescript,javascript,ruby cmap A<cr> :call SwapBetweenSpecAndCodeFile()<cr>
@@ -169,6 +172,9 @@ function! SwapBetweenSpecAndCodeFile()
 
   exec ':e ' . file
 endfunction
+
+let g:deoplete#enable_at_startup = 1
+set omnifunc=TSOmnicFunc
 
 colorscheme gruvbox
 " colorscheme blackboard
