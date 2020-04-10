@@ -10,7 +10,7 @@ ln -s $(pwd)/.inputrc ~/.inputrc
 
 git config --global core.excludesfile $(pwd)/.gitignore.global
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+[ ! -d "~/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 EXTENSION_INCLUDED=$(cat ~/.bash_profile | grep $(pwd)/.bash_profile_extension)
 if [ -z "$EXTENSION_INCLUDED" ]; then
