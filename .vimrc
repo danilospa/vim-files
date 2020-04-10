@@ -149,6 +149,8 @@ set ignorecase
 " If expression has capital letter the case is relevant
 set smartcase
 
+set relativenumber
+
 " FUNCTIONS
 function! SwapBetweenSpecAndCodeFile()
   let filename = expand('%:t')
