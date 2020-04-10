@@ -25,6 +25,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'morhetz/gruvbox'
 Plug 'wmvanvliet/vim-blackboard'
 Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 syntax on
