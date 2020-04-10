@@ -22,6 +22,9 @@ Plug 'Shougo/vimproc.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'digitaltoad/vim-pug'
+Plug 'morhetz/gruvbox'
+Plug 'wmvanvliet/vim-blackboard'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 syntax on
@@ -165,3 +168,7 @@ function! SwapBetweenSpecAndCodeFile()
 
   exec ':e ' . file
 endfunction
+
+colorscheme gruvbox
+" colorscheme blackboard
+" colorscheme base16-default-dark
