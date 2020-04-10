@@ -18,7 +18,7 @@ Plug 'grvcoelho/vim-javascript-snippets'
 Plug 'dense-analysis/ale'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'digitaltoad/vim-pug'
