@@ -21,3 +21,12 @@ ZSH_INCLUDED=$(cat ~/.zshrc | grep $(pwd)/.zshrc_extension)
 if [ -z "$ZSH_INCLUDED" ]; then
   echo source $(pwd)/.zshrc_extension >> ~/.zshrc
 fi
+
+read -p "Setup for neovim?: (y/n) " neovim_setup
+if [ "$neovim_setup" == "y" ]; then
+  mkdir -p ~/.config/nvim
+  NVIM_FILE=~/.config/nvim/init.vim
+  echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" >> $NVIM_FILE
+  echo "let &packpath = &runtimepath" >> $NVIM_FILE
+  echo "source ~/.vimrc" >> ~/.config/nvim/init.vim
+fi
