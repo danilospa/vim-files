@@ -184,6 +184,9 @@ endfunction
 let g:deoplete#enable_at_startup = 1
 set omnifunc=TSOmnicFunc
 
+let g:python_host_prog  = '/usr/bin/python'
+let g:python3_host_prog  = '/usr/local/bin/python3'
+
 colorscheme gruvbox
 " colorscheme blackboard
 " colorscheme base16-default-dark
