@@ -27,7 +27,7 @@ Plug 'morhetz/gruvbox'
 Plug 'wmvanvliet/vim-blackboard'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'Shougo/denite.nvim'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -97,7 +97,7 @@ nnoremap cf :let @*=expand('%')<cr>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Map json to format json
-cnoremap json %!python -m json.tool<cr>
+cnoremap json %!python3 -m json.tool<cr>
 
 " Navigate without arrows on command line
 cnoremap <C-k> <Up>
