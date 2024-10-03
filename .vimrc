@@ -206,3 +206,30 @@ nnoremap gac :lua require('textcase').current_word('to_camel_case')<CR>
 nnoremap gap :lua require('textcase').current_word('to_pascal_case')<CR>
 nnoremap gat :lua require('textcase').current_word('to_title_case')<CR>
 nnoremap gaf :lua require('textcase').current_word('to_path_case')<CR>
+
+function! ExecuteInNewPaneFromLine()
+    " Get the command on the current line
+    let l:command = getline('.')
+
+    " Open a new pane
+    vnew
+
+    " Run the command and insert the output in the new pane
+    execute 'read !' . l:command
+endfunction
+
+function! ExecuteInNewPaneFromFullBuffer()
+    " Get the entire content of the current buffer
+    let l:content = join(getline(1, '$'), "\n")
+
+    " Open a new pane
+    vnew
+
+    " Run the command using the entire buffer content as input
+    execute 'read !echo "' . substitute(l:content, '"', '\\"', 'g') . '" | sh'
+endfunction
+
+" need to not handle as buffer
+map <leader>e :call ExecuteInNewPaneFromLine()<cr>
+" not working as expected
+map <leader>fe :call ExecuteInNewPaneFromFullBuffer()<cr>
