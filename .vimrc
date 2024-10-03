@@ -8,7 +8,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tlib_vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'honza/vim-snippets'
@@ -27,9 +26,11 @@ Plug 'morhetz/gruvbox'
 Plug 'wmvanvliet/vim-blackboard'
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mhartington/nvim-typescript', {'do': ':!install.sh \| UpdateRemotePlugins'}
 Plug 'Shougo/denite.nvim'
 Plug 'johmsalas/text-case.nvim'
+Plug 'pmizio/typescript-tools.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'neovim/nvim-lspconfig'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -183,7 +184,6 @@ function! SwapBetweenSpecAndCodeFile()
 endfunction
 
 let g:deoplete#enable_at_startup = 1
-set omnifunc=TSOmnicFunc
 
 let g:python_host_prog  = '/usr/bin/python'
 let g:python3_host_prog  = '/usr/local/bin/python3'

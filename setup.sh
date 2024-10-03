@@ -7,6 +7,7 @@ ln -s $(pwd)/.vim/swap ~/.vim/swap
 ln -s $(pwd)/.vim/undo ~/.vim/undo
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.inputrc ~/.inputrc
+ln -s $(pwd)/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 git config --global core.excludesfile $(pwd)/.gitignore.global
 
