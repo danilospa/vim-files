@@ -63,7 +63,9 @@ map <leader>l :set list!<cr>
 
 " Copy/Cut to system clipboard
 vmap <Leader>y "+y
+nnoremap <Leader>fy gg"+yG
 vmap <Leader>d "+d
+nnoremap <Leader>fd gg"+dG
 
 " Paste from system clipboard
 vmap <Leader>p "+p
