@@ -92,6 +92,10 @@ nnoremap L $
 
 " Copy relative file path
 nnoremap cf :let @*=expand('%')<cr>
+" Copy full file path
+nnoremap fcf :let @*=expand('%:p')<cr>
+" reload .vimrc file
+nnoremap rlrc :so ~/.vimrc<cr>
 
 " ########## COMMAND-LINE MODE MAPPING ##########
 
