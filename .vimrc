@@ -31,6 +31,8 @@ Plug 'johmsalas/text-case.nvim'
 Plug 'pmizio/typescript-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'folke/snacks.nvim'
+Plug 'coder/claudecode.nvim'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -237,3 +239,24 @@ endfunction
 map <leader>e :call ExecuteInNewPaneFromLine()<cr>
 " not working as expected
 map <leader>fe :call ExecuteInNewPaneFromFullBuffer()<cr>
+
+" After plug#end(), add the Lua config block:
+lua << EOF
+require("claudecode").setup({
+  terminal = {
+    provider = "native",  -- use native if you don't want snacks.nvim dependency
+  },
+})
+EOF
+
+"" Key mappings For claudecode
+
+nnoremap <leader>ac <cmd>ClaudeCode<cr>
+nnoremap <leader>af <cmd>ClaudeCodeFocus<cr>
+nnoremap <leader>ab <cmd>ClaudeCodeAdd %<cr>
+vnoremap <leader>as <cmd>ClaudeCodeSend<cr>
+nnoremap <leader>aa <cmd>ClaudeCodeDiffAccept<cr>
+nnoremap <leader>ad <cmd>ClaudeCodeDiffDeny<cr>
+" Exit terminal mode and switch window
+tnoremap <C-w>h <C-\><C-n><C-w>h
+tnoremap <C-w>l <C-\><C-n><C-w>l
